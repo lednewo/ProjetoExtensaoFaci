@@ -10,6 +10,7 @@ def add_page(page: ft.Page):
             [
                 #TOP TITLE
                 ft.Row(
+                    alignment= ft.MainAxisAlignment.CENTER,
                     controls=[
                         ft.Text(
                             value= "Adicionar Viagem", style= "headlineMedium",

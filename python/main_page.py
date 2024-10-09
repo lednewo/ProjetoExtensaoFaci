@@ -1,5 +1,4 @@
 import flet as ft
-from .components.card_informacoes import CartaoInformacoes
 
 def main_page(page: ft.Page):
     page.title = "Main Page"
@@ -28,15 +27,6 @@ def main_page(page: ft.Page):
                             width=350),
                         ]
                 ),
-                
-                CartaoInformacoes(
-                    comprador= "comprador", 
-                    data= "awdasd",
-                    destino= "asdawd",
-                    num_animais= "asdawd",
-                    origem= "awdasd",
-                    valor="1200"
-                    ),
 
 
                 ft.BottomAppBar(
