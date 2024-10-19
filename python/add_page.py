@@ -1,6 +1,29 @@
 import flet as ft
+import uuid
+
+comprador = ft.TextField(label="Digite aqui", width=350)
+data = ft.TextField(label="Digite aqui", width=350)
+origem = ft.TextField(label="Digite aqui", width=350)
+destino = ft.TextField(label="Digite aqui", width=350)
+valor = ft.TextField(label="Digite aqui", width=350)
+num_animais = ft.TextField(label="Digite aqui", width=350)
 
 def add_page(page: ft.Page):
+
+    def nome(e):
+          list = []
+          list.append({
+               "Comprador": comprador.value, 
+               "Data": data.value,
+               "Origem": origem.value,
+               "Destino": destino.value,
+               "Valor": valor.value,
+               "NumeroDeAnimais": num_animais.value,
+               "Id": uuid.uuid4(),
+               })
+          print(list)
+
+
     page.title = "Tela 2"
     page.views.clear()
     page.views.append(
@@ -24,20 +47,16 @@ def add_page(page: ft.Page):
                 # TEXTFIELD COMPRADOR
                 ft.Text(value= "Comprador"),
                 ft.Row(
-                controls=[
-                    ft.TextField(
-                        label="Digite aqui", 
-                        width=350),
+                    controls=[
+                        comprador
                     ]
                 ),
 
                 # TEXTFIELD DATA
                 ft.Text(value= "Data"),
                 ft.Row(
-                controls=[
-                    ft.TextField(
-                        label="Digite aqui", 
-                        width=350),
+                    controls=[
+                        data
                     ]
                 ),
 
@@ -45,9 +64,7 @@ def add_page(page: ft.Page):
                 ft.Text(value= "Origem"),
                 ft.Row(
                 controls=[
-                    ft.TextField(
-                        label="Digite aqui", 
-                        width=350),
+                    origem
                     ]
                 ),
 
@@ -55,9 +72,7 @@ def add_page(page: ft.Page):
                 ft.Text(value= "Destino"),
                 ft.Row(
                 controls=[
-                    ft.TextField(
-                        label="Digite aqui", 
-                        width=350),
+                    destino
                     ]
                 ),
 
@@ -65,10 +80,7 @@ def add_page(page: ft.Page):
                 ft.Text(value= "Valor"),
                 ft.Row(
                 controls=[
-                    ft.TextField(
-                        label="Digite aqui", 
-                        width=350,
-                        ),
+                    valor
                     ]
                 ),
 
@@ -76,10 +88,7 @@ def add_page(page: ft.Page):
                 ft.Text(value= "Número de animais"),
                 ft.Row(
                 controls=[
-                    ft.TextField(
-                        label="Digite aqui", 
-                        width=350,
-                        ),
+                    num_animais
                     ]
                 ),
                 
@@ -90,7 +99,8 @@ def add_page(page: ft.Page):
                         ft.FilledButton(
                             icon= "save", 
                             text= "Salvar", 
-                            on_click= {},
+                            on_click=
+                                 nome,
                         ),
                     ]
                 ),

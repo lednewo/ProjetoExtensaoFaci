@@ -1,0 +1,3 @@
+class Viagem():
+    comprador = ""
+    data = ""

@@ -28,6 +28,9 @@ def main_page(page: ft.Page):
                         ]
                 ),
 
+                
+                
+
 
                 ft.BottomAppBar(
                     bgcolor=ft.colors.GREY_800,
